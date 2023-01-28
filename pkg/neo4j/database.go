@@ -2,8 +2,9 @@ package neo4j
 
 import (
 	"context"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j"
 	"log"
+
+	"github.com/neo4j/neo4j-go-driver/v5/neo4j"
 )
 
 func GetDriver(ctx context.Context, DBURI, DBUser, DBPass string) neo4j.DriverWithContext {

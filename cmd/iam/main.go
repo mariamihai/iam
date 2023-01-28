@@ -2,13 +2,14 @@ package main
 
 import (
 	"context"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j"
 	"iam/cmd/iam/webservice"
 	"iam/configs"
 	pkgneo4j "iam/pkg/neo4j"
 	"log"
 	"os"
 	"time"
+
+	"github.com/neo4j/neo4j-go-driver/v5/neo4j"
 )
 
 func initializeDependencies(ctx context.Context) (*configs.Config, neo4j.DriverWithContext) {

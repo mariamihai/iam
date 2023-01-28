@@ -1,11 +1,12 @@
 package webservice
 
 import (
-	"github.com/gin-gonic/gin"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j"
 	"iam/internal/handlers/middleware"
 	"iam/internal/handlers/webservice"
 	"log"
+
+	"github.com/gin-gonic/gin"
+	"github.com/neo4j/neo4j-go-driver/v5/neo4j"
 )
 
 func RunWebservice(ginMode string, _ neo4j.DriverWithContext) error {
@@ -18,7 +19,7 @@ func RunWebservice(ginMode string, _ neo4j.DriverWithContext) error {
 	gin.SetMode(ginMode)
 
 	router.Use(
-		middleware.CorrelationId(),
+		middleware.CorrelationID(),
 		middleware.Logger(),
 		//middleware.LoggerWithFormatter(),
 		// Recovers from any panics and writes a 500 if there was one
