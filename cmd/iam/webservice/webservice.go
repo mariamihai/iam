@@ -12,9 +12,9 @@ func RunWebservice(ginMode string, _ neo4j.DriverWithContext) error {
 	w := webservice.NewWebservice()
 
 	router := gin.Default()
-	gin.DebugPrintRouteFunc = func(httpMethod, absolutePath, handlerName string, nuHandlers int) {
-		log.Printf("endpoint %v %v %v %v\n", httpMethod, absolutePath, handlerName, nuHandlers)
-	}
+	//gin.DebugPrintRouteFunc = func(httpMethod, absolutePath, handlerName string, nuHandlers int) {
+	//	log.Printf("endpoint %v %v %v %v\n", httpMethod, absolutePath, handlerName, nuHandlers)
+	//}
 	gin.SetMode(ginMode)
 
 	router.Use(
