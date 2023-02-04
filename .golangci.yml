@@ -38,6 +38,9 @@ linters:
 #    - gosimple # same as staticcheck linter
 
   linters-settings:
+    govet:
+      # Report about shadowed variables.
+      check-shadowing: true
     stylecheck:
       # STxxxx checks in https://staticcheck.io/docs/configuration/options/#checks
       # Default: ["*"]
